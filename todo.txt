@@ -1,0 +1,3 @@
+Look for Qt model Matching
+Create docstrings for mayor classes
+Write ReadMe
