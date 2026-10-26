@@ -1,0 +1,64 @@
+[project]
+name = "py-mvvm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "AndotMX", email = "158499523+AndotMX@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.162.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pyqtgraph>=0.14.0",
+    "pyside6>=6.12.0",
+    "python-lsp-server>=1.15.0",
+    "rich>=15.0.0",
+    "toml>=0.10.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "src"
+module-name = "model"
+
+[tool.ruff]
+line-length = 100
+lint.select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "N",   # pep8-naming
+    "B",   # flake8-bugbear
+    "C90", # complexity
+    "SIM", # simplify
+    "UP",  # pyupgrade
+    "I",   # isort
+]
+
+lint.ignore = [
+    "E501",  # line too long (handled by formatter)
+    "F403",  # 'from module import *' used; unable to detect undefined names
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"ui_*.py" = ["E501", "N", "D", "ANN"]
+
+[tool.pyside6-project]
+# Track all project files and point to their new directory paths
+files = [
+    "src/main.py",
+    "src/view/Main.qml",
+    "src/view/qmldir",
+    "src/view/CustomButton.qml"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

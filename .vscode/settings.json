@@ -1,0 +1,42 @@
+{
+    "python.linting.enabled": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.extraPaths": [
+        "./model",
+        "./view",
+        "./view-model",
+        "./utils"
+    ],
+    
+    "ruff.enable": true,
+    "ruff.organizeImports": true,
+    
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "[python]": 
+    {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    
+    "python.languageServer": "None",
+    "python.linting.ruffEnabled": true,
+    "python.linting.ruffArgs": [
+        "--fix"
+    ],
+    "qt-core.additionalQtPaths": [],
+
+    "editor.formatOnSave": true,
+    "notebook.formatOnSave.enabled": true,
+    "[python-notebook]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "ruff.path": [
+        "ruff"
+    ],
+    "python.testing.pytestEnabled": true
+}

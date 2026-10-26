@@ -1,0 +1,9 @@
+{
+    "PowerSupply": {
+        "type": "mock",
+        "kwargs": {
+        "port": "COM1",
+        "auto_open": true
+    }
+    }
+}

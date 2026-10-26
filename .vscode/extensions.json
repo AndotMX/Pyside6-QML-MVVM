@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "astral-sh.ty",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "theqtcompany.qt-python-pack",
+        "tamasfe.even-better-toml",
+    ]
+}

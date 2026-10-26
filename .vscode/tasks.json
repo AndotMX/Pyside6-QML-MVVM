@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Ruff: Format + Fix",
+            "type": "shell",
+            "windows": {
+                "command": "uvx ruff format .; uvx ruff check --fix ."
+            },
+            "linux":{
+                "command": "uvx ruff format . && uvx ruff check --fix ."
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Clear Terminal",
+            "type": "shell",
+            "command": "cls",
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Qt Designer",
+            "type": "shell",
+            "command": "\"${workspaceFolder}\\.venv\\Scripts\\pyside6-designer.exe\"",
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Qt: Compile QRC",
+            "type": "shell",
+            "command": "\"${workspaceFolder}\\.venv\\Scripts\\pyside6-rcc.exe\" -o view\\qrc\\main_rc.py view\\qrc\\main.qrc",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
